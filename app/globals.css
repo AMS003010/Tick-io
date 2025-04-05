@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+body, html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-2px); }
+  40% { transform: translateX(2px); }
+  60% { transform: translateX(-2px); }
+  80% { transform: translateX(2px); }
+}
+
+.shake-on-hover:hover .shake-text {
+  animation: shake 0.4s infinite;
+}
+
+.glow-text {
+  color: #0ff;
+  text-shadow: 0 0 4px #0ff, 0 0 8px #0ff, 0 0 12px #0ff;
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.glow-text:hover {
+  text-shadow: 0 0 6px #0ff, 0 0 12px #0ff, 0 0 20px #0ff;
+}
+
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
