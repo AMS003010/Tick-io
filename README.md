@@ -1,4 +1,4 @@
-# 🕒 Tick.io
+# 📈 Tick.io
 
 **Tick.io** visualizes trading CSVs as candlestick charts with 15min and 1hr intervals. Compare trends, add markers, and store data locally in your browser.
 
