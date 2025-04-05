@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🕒 Tick.io
 
-## Getting Started
+**Tick.io** visualizes trading CSVs as candlestick charts with 15min and 1hr intervals. Compare trends, add markers, and store data locally in your browser.
 
-First, run the development server:
+---
+
+## ✨ Features
+
+- 📈 Interactive **Candlestick Charts** using TradingView’s Lightweight Charts  
+- ⏱️ Supports both **15-minute** and **1-hour** timeframes  
+- 📂 **Compare multiple trading histories** from different CSVs  
+- 🧠 Add **markers** to highlight key points  
+- 📏 **Persistent storage** with IndexedDB — no re-uploads needed  
+- ↺ Automatically detects and parses time interval formats  
+- ⚡ Renders both chart formats if data allows  
+
+---
+
+## 🚀 Getting Started
+
+### Clone & Run Locally
 
 ```bash
+git clone https://github.com/AMS003010/Tick-io.git
+cd Tick-io
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to use the app.
+You can use sample csv dumps in the `/sample-csv`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🐳 Run with Docker
 
-## Learn More
+You can also run Tick.io in a container:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+docker run -p 3000:3000 ams132/tick-io-image:latest
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000) to get started.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠 Technologies Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Next.js** – React framework for web apps  
+- **Tailwind CSS** – Utility-first styling  
+- **Lightweight Charts** – High-performance charts by TradingView  
+- **IndexedDB** – Client-side persistence  
+- **CSV Parsing** – Dynamic format detection & chart rendering  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## ✨ Future Improvements
+
+- ✍️ Add drawing tools (trendlines, fib retracements, etc.)
+- ⚠️ Allow users to filter trades by date range, trade type (BUY/SELL), profit/loss, account, or price
+- 📈 Define and simulate strategies (e.g., moving averages, RSI) with performance visualization
+- 🤝 Evaluate risk and return analytics for trades and strategies
+- 📄 Export charts or reports as PDF, or generate shareable links for collaboration
+
+---
+
+Made with ❤️ for traders and tinkerers.
+
